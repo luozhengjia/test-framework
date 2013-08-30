@@ -1,0 +1,15 @@
+/target
+
+/.settings
+
+eclipse/
+
+logs/
+
+tmp/
+
+lib/
+
+.classpath
+
+.project

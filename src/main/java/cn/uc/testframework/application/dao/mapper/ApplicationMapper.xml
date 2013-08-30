@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.uc.testframework.application.dao.ApplicationMapper" >
+  	<resultMap id="ApplicationMapper" type="cn.uc.testframework.application.model.Application" >
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="count" property="count" jdbcType="INTEGER" />
+        <result column="weight" property="weight" jdbcType="INTEGER" />
+    </resultMap>
+    
+    <select id="queryApplicationList" resultMap="ApplicationMapper">
+  		SELECT *from tbl_application
+  	</select>
+  	
+	
+</mapper>
