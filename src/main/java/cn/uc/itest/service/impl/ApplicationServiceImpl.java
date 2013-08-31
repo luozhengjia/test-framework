@@ -1,4 +1,4 @@
-package cn.uc.testframework.application.service.impl;
+package cn.uc.itest.service.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
-import cn.uc.testframework.application.dao.ApplicationMapper;
-import cn.uc.testframework.application.model.Application;
-import cn.uc.testframework.application.service.ApplicationService;
+import cn.uc.itest.dao.ApplicationMapper;
+import cn.uc.itest.model.Application;
+import cn.uc.itest.service.ApplicationService;
 
 @Service
 public class ApplicationServiceImpl implements ApplicationService {

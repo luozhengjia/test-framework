@@ -1,4 +1,4 @@
-package cn.uc.testframework.application.model;
+package cn.uc.itest.model;
 
 import java.io.Serializable;
 

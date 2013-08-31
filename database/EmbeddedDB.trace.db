@@ -97,3 +97,320 @@ weight SMALLINT NOT NULL
 08-25 14:27:19 jdbc[2]: exception
 org.h2.jdbc.JdbcSQLException: Table "TABLE" not found; SQL statement:
 select *from TABLE tbl_application [42102-171]
+08-31 23:19:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""TBL_APPLICATION"" (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+) ENGINE=INNODB DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE IF NOT EXISTS `tbl_application` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:19:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+) ENGINE=INNODB DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE IF NOT EXISTS tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:20:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE  TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+) ENGINE=INNODB DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE  tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:20:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+)  DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE IF NOT EXISTS tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+)  DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:20:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE  TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+)  DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE  tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+)  DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:20:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE  TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+)  DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE  tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+)  DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:20:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE  TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+)  DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE  tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+)  DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:21:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE  TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+)  DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE  tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+)  DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBL_APPLICATION" not found; SQL statement:
+drop table tbl_application [42102-171]
+08-31 23:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE  TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+)  DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE  tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+)  DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:21:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE  TBL_APPLICATION (
+  ""ID"" INT(11) NOT NULL,
+  ""TITLE"" VARCHAR(200) NOT NULL,
+  ""DESCRIPTION"" TEXT,
+  ""DB_URL"" VARCHAR(200) DEFAULT NULL,
+  ""DB_DRIVER"" VARCHAR(32) DEFAULT NULL,
+  ""DB_USER"" VARCHAR(50) DEFAULT NULL,
+  ""DB_PASSWORD"" VARCHAR(50) DEFAULT NULL
+)  DEFAULT[*] CHARSET=UTF8 "; SQL statement:
+CREATE TABLE  tbl_application (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` text,
+  `db_url` varchar(200) DEFAULT NULL,
+  `db_driver` varchar(32) DEFAULT NULL,
+  `db_user` varchar(50) DEFAULT NULL,
+  `db_password` varchar(50) DEFAULT NULL
+)  DEFAULT CHARSET=utf8 [42000-171]
+08-31 23:22:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: "INTERFACE_ID"; SQL statement:
+CREATE TABLE IF NOT EXISTS `tbl_http_scheme` (
+  `id` varchar(32) NOT NULL,
+  `method` varchar(10) NOT NULL,
+  `interface_id` varchar(32) NOT NULL,
+  KEY `interface_id` (`interface_id`)
+) [50004-171]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3661)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3524)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5228)
+	at org.h2.command.Parser.parseCreate(Parser.java:3813)
+	at org.h2.command.Parser.parsePrepared(Parser.java:323)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:417)
+	at org.h2.engine.Session.prepareCommand(Session.java:366)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1312)
+	at org.h2.server.web.WebApp.query(WebApp.java:1002)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:965)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:166)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)
+08-31 23:22:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: "INTERFACE_ID"; SQL statement:
+CREATE TABLE  `tbl_http_scheme` (
+  `id` varchar(32) NOT NULL,
+  `method` varchar(10) NOT NULL,
+  `interface_id` varchar(32) NOT NULL,
+  KEY `interface_id` (`interface_id`)
+) [50004-171]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3661)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3524)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5228)
+	at org.h2.command.Parser.parseCreate(Parser.java:3813)
+	at org.h2.command.Parser.parsePrepared(Parser.java:323)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:417)
+	at org.h2.engine.Session.prepareCommand(Session.java:366)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1312)
+	at org.h2.server.web.WebApp.query(WebApp.java:1002)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:965)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:166)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)
+08-31 23:22:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: "INTERFACE_ID"; SQL statement:
+CREATE TABLE  tbl_http_scheme (
+  `id` varchar(32) NOT NULL,
+  `method` varchar(10) NOT NULL,
+  `interface_id` varchar(32) NOT NULL,
+  KEY `interface_id` (`interface_id`)
+) [50004-171]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3661)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3524)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5228)
+	at org.h2.command.Parser.parseCreate(Parser.java:3813)
+	at org.h2.command.Parser.parsePrepared(Parser.java:323)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:417)
+	at org.h2.engine.Session.prepareCommand(Session.java:366)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1312)
+	at org.h2.server.web.WebApp.query(WebApp.java:1002)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:965)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:166)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)
+08-31 23:22:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: "INTERFACE_ID"; SQL statement:
+CREATE TABLE  tbl_http_scheme (
+  `id` varchar(32) NOT NULL,
+  `method` varchar(10) NOT NULL,
+  `interface_id` varchar(32) NOT NULL,
+  KEY `interface_id` (`interface_id`)
+) [50004-171]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3661)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3524)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5228)
+	at org.h2.command.Parser.parseCreate(Parser.java:3813)
+	at org.h2.command.Parser.parsePrepared(Parser.java:323)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:417)
+	at org.h2.engine.Session.prepareCommand(Session.java:366)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1312)
+	at org.h2.server.web.WebApp.query(WebApp.java:1002)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:965)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:166)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)

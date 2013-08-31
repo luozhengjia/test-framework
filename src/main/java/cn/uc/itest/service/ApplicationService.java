@@ -1,8 +1,8 @@
-package cn.uc.testframework.application.service;
+package cn.uc.itest.service;
 
 import java.util.List;
 
-import cn.uc.testframework.application.model.Application;
+import cn.uc.itest.model.Application;
 
 public interface ApplicationService {
     /**

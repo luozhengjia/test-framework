@@ -1,8 +1,8 @@
-package cn.uc.testframework.application.dao;
+package cn.uc.itest.dao;
 
 import java.util.List;
 
-import cn.uc.testframework.application.model.Application;
+import cn.uc.itest.model.Application;
 
 /**
  * 应用服务接口
