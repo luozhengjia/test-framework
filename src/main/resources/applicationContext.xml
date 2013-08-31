@@ -14,7 +14,7 @@
 	<context:annotation-config />
 
 	<!-- 使用annotation 自动注册bean -->
-	<context:component-scan base-package="cn.uc.testframework" />
+	<context:component-scan base-package="cn.uc.itest" />
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.h2.Driver" />
@@ -26,12 +26,12 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="configLocation" value="classpath:mybatis-config.xml"/>
-		<property name="mapperLocations" value="classpath*:cn/uc/testframework/*/dao/mapper/*.xml" />
+		<property name="mapperLocations" value="classpath*:cn/uc/itest/dao/mapper/*.xml" />
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-        <property name="basePackage" value="cn.uc.testframework.*.dao"/> 
+        <property name="basePackage" value="cn.uc.itest.dao"/> 
     </bean>
 
 </beans>
