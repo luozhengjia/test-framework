@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="HttpSchemeParamsMapper" >
+    <resultMap id="HttpSchemeParamsMapper" type="com.yougou.mobilemall.twweb.domain.HttpSchemeParams" >
+        
+        <result column="id" property="id" jdbcType="VARCHAR" />
+        
+        <result column="http_scheme_id" property="httpSchemeId" jdbcType="VARCHAR" />
+        
+        <result column="type" property="type" jdbcType="TINYINT" />
+        
+        <result column="param_name" property="paramName" jdbcType="VARCHAR" />
+        
+        <result column="param_value" property="paramValue" jdbcType="LONGVARCHAR" />
+    </resultMap>
+    
+    <sql id="Base_Column_List" >
+        id,
+        http_scheme_id,
+        type,
+        param_name,
+        param_value
+    </sql>
+    
+    <sql id="where">
+        <if test="id!=null and id!=''">
+        and id = #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="httpSchemeId!=null and httpSchemeId!=''">
+        and http_scheme_id = #{httpSchemeId,jdbcType=VARCHAR}
+        </if>
+        <if test="type!=null and type!=''">
+        and type = #{type,jdbcType=TINYINT}
+        </if>
+        <if test="paramName!=null and paramName!=''">
+        and param_name = #{paramName,jdbcType=VARCHAR}
+        </if>
+        <if test="paramValue!=null and paramValue!=''">
+        and param_value = #{paramValue,jdbcType=LONGVARCHAR}
+        </if>
+    </sql>
+    
+    <select id="getById" resultMap="HttpSchemeParamsMapper" parameterType="java.lang.String" >
+        select 
+        <include refid="Base_Column_List" />
+        from tbl_http_scheme_params
+        where ID = #{id,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getAll" parameterType="com.yougou.mobilemall.twweb.domain.HttpSchemeParams" resultMap="HttpSchemeParamsMapper">
+        select * from tbl_http_scheme_params where 1=1 
+        <include refid="where" />
+    </select>
+    
+    <select id="getByPage" parameterType="com.yougou.mobilemall.twweb.domain.HttpSchemeParams" resultMap="HttpSchemeParamsMapper">
+        select * from tbl_http_scheme_params where 1=1 
+        <include refid="where" />
+    </select>
+    
+    <select id="getByPageCount" parameterType="com.yougou.mobilemall.twweb.domain.HttpSchemeParams" resultType="int">
+        select count(1) from tbl_http_scheme_params where 1=1 
+        <include refid="where" />
+    </select>
+   
+    <insert id="save" parameterType="com.yougou.mobilemall.twweb.domain.HttpSchemeParams" >
+        insert into tbl_http_scheme_params (<include refid="Base_Column_List" />)
+        values (
+        #{id,jdbcType=VARCHAR},
+        #{httpSchemeId,jdbcType=VARCHAR},
+        #{type,jdbcType=TINYINT},
+        #{paramName,jdbcType=VARCHAR},
+        #{paramValue,jdbcType=LONGVARCHAR}
+        )
+    </insert>
+    
+    <delete id="remove" parameterType="java.lang.String" >
+        delete from tbl_http_scheme_params
+        where ID = #{id,jdbcType=VARCHAR}
+    </delete>
+    
+    <update id="update" parameterType="com.yougou.mobilemall.twweb.domain.HttpSchemeParams" >
+        update tbl_http_scheme_params
+        <set>
+            <if test="id != null" >
+                id = #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="httpSchemeId != null" >
+                http_scheme_id = #{httpSchemeId,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null" >
+                type = #{type,jdbcType=TINYINT},
+            </if>
+            <if test="paramName != null" >
+                param_name = #{paramName,jdbcType=VARCHAR},
+            </if>
+            <if test="paramValue != null" >
+                param_value = #{paramValue,jdbcType=LONGVARCHAR}
+            </if>
+        </set>
+        where ID = #{id,jdbcType=VARCHAR}
+    </update>
+</mapper>

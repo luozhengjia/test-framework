@@ -1,15 +1,122 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.uc.testframework.application.dao.ApplicationMapper" >
-  	<resultMap id="ApplicationMapper" type="cn.uc.testframework.application.model.Application" >
-        <result column="name" property="name" jdbcType="VARCHAR" />
-        <result column="count" property="count" jdbcType="INTEGER" />
-        <result column="weight" property="weight" jdbcType="INTEGER" />
+<mapper namespace="ApplicationMapper" >
+    <resultMap id="ApplicationMapper" type="com.yougou.mobilemall.twweb.domain.Application" >
+        
+        <result column="id" property="id" jdbcType="INTEGER" />
+        
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        
+        <result column="description" property="description" jdbcType="LONGVARCHAR" />
+        
+        <result column="db_url" property="dbUrl" jdbcType="VARCHAR" />
+        
+        <result column="db_driver" property="dbDriver" jdbcType="VARCHAR" />
+        
+        <result column="db_user" property="dbUser" jdbcType="VARCHAR" />
+        
+        <result column="db_password" property="dbPassword" jdbcType="VARCHAR" />
     </resultMap>
     
-    <select id="queryApplicationList" resultMap="ApplicationMapper">
-  		SELECT *from tbl_application
-  	</select>
-  	
-	
+    <sql id="Base_Column_List" >
+        id,
+        title,
+        description,
+        db_url,
+        db_driver,
+        db_user,
+        db_password
+    </sql>
+    
+    <sql id="where">
+        <if test="id!=null and id!=''">
+        and id = #{id,jdbcType=INTEGER}
+        </if>
+        <if test="title!=null and title!=''">
+        and title = #{title,jdbcType=VARCHAR}
+        </if>
+        <if test="description!=null and description!=''">
+        and description = #{description,jdbcType=LONGVARCHAR}
+        </if>
+        <if test="dbUrl!=null and dbUrl!=''">
+        and db_url = #{dbUrl,jdbcType=VARCHAR}
+        </if>
+        <if test="dbDriver!=null and dbDriver!=''">
+        and db_driver = #{dbDriver,jdbcType=VARCHAR}
+        </if>
+        <if test="dbUser!=null and dbUser!=''">
+        and db_user = #{dbUser,jdbcType=VARCHAR}
+        </if>
+        <if test="dbPassword!=null and dbPassword!=''">
+        and db_password = #{dbPassword,jdbcType=VARCHAR}
+        </if>
+    </sql>
+    
+    <select id="getById" resultMap="ApplicationMapper" parameterType="java.lang.String" >
+        select 
+        <include refid="Base_Column_List" />
+        from tbl_application
+        where ID = #{id,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getAll" parameterType="com.yougou.mobilemall.twweb.domain.Application" resultMap="ApplicationMapper">
+        select * from tbl_application where 1=1 
+        <include refid="where" />
+    </select>
+    
+    <select id="getByPage" parameterType="com.yougou.mobilemall.twweb.domain.Application" resultMap="ApplicationMapper">
+        select * from tbl_application where 1=1 
+        <include refid="where" />
+    </select>
+    
+    <select id="getByPageCount" parameterType="com.yougou.mobilemall.twweb.domain.Application" resultType="int">
+        select count(1) from tbl_application where 1=1 
+        <include refid="where" />
+    </select>
+   
+    <insert id="save" parameterType="com.yougou.mobilemall.twweb.domain.Application" >
+        insert into tbl_application (<include refid="Base_Column_List" />)
+        values (
+        #{id,jdbcType=INTEGER},
+        #{title,jdbcType=VARCHAR},
+        #{description,jdbcType=LONGVARCHAR},
+        #{dbUrl,jdbcType=VARCHAR},
+        #{dbDriver,jdbcType=VARCHAR},
+        #{dbUser,jdbcType=VARCHAR},
+        #{dbPassword,jdbcType=VARCHAR}
+        )
+    </insert>
+    
+    <delete id="remove" parameterType="java.lang.String" >
+        delete from tbl_application
+        where ID = #{id,jdbcType=VARCHAR}
+    </delete>
+    
+    <update id="update" parameterType="com.yougou.mobilemall.twweb.domain.Application" >
+        update tbl_application
+        <set>
+            <if test="id != null" >
+                id = #{id,jdbcType=INTEGER},
+            </if>
+            <if test="title != null" >
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null" >
+                description = #{description,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="dbUrl != null" >
+                db_url = #{dbUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="dbDriver != null" >
+                db_driver = #{dbDriver,jdbcType=VARCHAR},
+            </if>
+            <if test="dbUser != null" >
+                db_user = #{dbUser,jdbcType=VARCHAR},
+            </if>
+            <if test="dbPassword != null" >
+                db_password = #{dbPassword,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where ID = #{id,jdbcType=VARCHAR}
+    </update>
 </mapper>
