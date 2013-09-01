@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.uc.itest.dao.mapper.ApplicationMapper" >
-    <resultMap id="ApplicationMapper" type="cn.uc.itest.model.Application" >
-        <result column="id" property="id" jdbcType="INTEGER" />
-        <result column="title" property="title" jdbcType="VARCHAR" />
-        <result column="description" property="description" jdbcType="LONGVARCHAR" />
-        <result column="db_url" property="dbUrl" jdbcType="VARCHAR" />
-        <result column="db_driver" property="dbDriver" jdbcType="VARCHAR" />
-        <result column="db_user" property="dbUser" jdbcType="VARCHAR" />
-        <result column="db_password" property="dbPassword" jdbcType="VARCHAR" />
-    </resultMap>
+<mapper namespace="cn.uc.itest.dao.ApplicationMapper">
+	<resultMap id="ApplicationMapper" type="cn.uc.itest.model.Application">
+		<result column="id" property="id" jdbcType="INTEGER" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="description" property="description" jdbcType="LONGVARCHAR" />
+		<result column="db_url" property="dbUrl" jdbcType="VARCHAR" />
+		<result column="db_driver" property="dbDriver" jdbcType="VARCHAR" />
+		<result column="db_user" property="dbUser" jdbcType="VARCHAR" />
+		<result column="db_password" property="dbPassword" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<select id="queryApplicationList" resultMap="ApplicationMapper">
+		select *from tbl_application
+	</select>
 </mapper>

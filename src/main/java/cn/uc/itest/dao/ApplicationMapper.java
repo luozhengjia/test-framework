@@ -1,5 +1,9 @@
 package cn.uc.itest.dao;
 
+import java.util.List;
+
+import cn.uc.itest.model.Application;
+
 
 /**
  * 应用服务接口
@@ -9,5 +13,10 @@ package cn.uc.itest.dao;
  */
 public interface ApplicationMapper {
 
-
+    /**
+     * 查询应用列表
+     * 
+     * @return
+     */
+    public List<Application> queryApplicationList();
 }

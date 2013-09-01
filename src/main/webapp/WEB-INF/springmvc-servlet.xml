@@ -12,7 +12,7 @@
 	default-autowire="byName">
 
 	<!-- 自动搜索@Controller标注的类 -->
-	<context:component-scan base-package="com.ucweb.appstore" />
+	<context:component-scan base-package="cn.uc.itest" />
 
 	<!-- 开启自动切面代理 -->
 	<aop:aspectj-autoproxy />
@@ -20,7 +20,7 @@
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basename" value="app-test-framework" />
+		<property name="basename" value="test-framework" />
 	</bean>
 	
 	<!-- 设置编码  -->

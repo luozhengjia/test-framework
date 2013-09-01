@@ -2,7 +2,8 @@ package cn.uc.itest.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import cn.uc.itest.service.ApplicationService;
 
 @Service
 public class ApplicationServiceImpl implements ApplicationService {
-    @Autowired
+    @Resource
     private ApplicationMapper applicationMapper;
 
     @Override
