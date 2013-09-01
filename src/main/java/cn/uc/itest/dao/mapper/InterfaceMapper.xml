@@ -1,192 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="InterfaceMapper" >
-    <resultMap id="InterfaceMapper" type="com.yougou.mobilemall.twweb.domain.Interface" >
-        
+<mapper namespace="cn.uc.itest.dao.mapper.InterfaceMapper" >
+    <resultMap id="InterfaceMapper" type="cn.uc.itest.model.Interface" >
         <result column="id" property="id" jdbcType="VARCHAR" />
-        
         <result column="application_id" property="applicationId" jdbcType="VARCHAR" />
-        
         <result column="title" property="title" jdbcType="VARCHAR" />
-        
         <result column="url" property="url" jdbcType="VARCHAR" />
-        
         <result column="protocol" property="protocol" jdbcType="VARCHAR" />
-        
         <result column="db_url" property="dbUrl" jdbcType="VARCHAR" />
-        
         <result column="db_driver" property="dbDriver" jdbcType="VARCHAR" />
-        
         <result column="db_user" property="dbUser" jdbcType="VARCHAR" />
-        
         <result column="db_password" property="dbPassword" jdbcType="VARCHAR" />
-        
         <result column="setup_script" property="setupScript" jdbcType="LONGVARCHAR" />
-        
         <result column="teardown_script" property="teardownScript" jdbcType="LONGVARCHAR" />
-        
         <result column="description" property="description" jdbcType="LONGVARCHAR" />
-        
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-        
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     </resultMap>
-    
-    <sql id="Base_Column_List" >
-        id,
-        application_id,
-        title,
-        url,
-        protocol,
-        db_url,
-        db_driver,
-        db_user,
-        db_password,
-        setup_script,
-        teardown_script,
-        description,
-        create_time,
-        update_time
-    </sql>
-    
-    <sql id="where">
-        <if test="id!=null and id!=''">
-        and id = #{id,jdbcType=VARCHAR}
-        </if>
-        <if test="applicationId!=null and applicationId!=''">
-        and application_id = #{applicationId,jdbcType=VARCHAR}
-        </if>
-        <if test="title!=null and title!=''">
-        and title = #{title,jdbcType=VARCHAR}
-        </if>
-        <if test="url!=null and url!=''">
-        and url = #{url,jdbcType=VARCHAR}
-        </if>
-        <if test="protocol!=null and protocol!=''">
-        and protocol = #{protocol,jdbcType=VARCHAR}
-        </if>
-        <if test="dbUrl!=null and dbUrl!=''">
-        and db_url = #{dbUrl,jdbcType=VARCHAR}
-        </if>
-        <if test="dbDriver!=null and dbDriver!=''">
-        and db_driver = #{dbDriver,jdbcType=VARCHAR}
-        </if>
-        <if test="dbUser!=null and dbUser!=''">
-        and db_user = #{dbUser,jdbcType=VARCHAR}
-        </if>
-        <if test="dbPassword!=null and dbPassword!=''">
-        and db_password = #{dbPassword,jdbcType=VARCHAR}
-        </if>
-        <if test="setupScript!=null and setupScript!=''">
-        and setup_script = #{setupScript,jdbcType=LONGVARCHAR}
-        </if>
-        <if test="teardownScript!=null and teardownScript!=''">
-        and teardown_script = #{teardownScript,jdbcType=LONGVARCHAR}
-        </if>
-        <if test="description!=null and description!=''">
-        and description = #{description,jdbcType=LONGVARCHAR}
-        </if>
-        <if test="createTime!=null and createTime!=''">
-        and create_time = #{createTime,jdbcType=TIMESTAMP}
-        </if>
-        <if test="updateTime!=null and updateTime!=''">
-        and update_time = #{updateTime,jdbcType=TIMESTAMP}
-        </if>
-    </sql>
-    
-    <select id="getById" resultMap="InterfaceMapper" parameterType="java.lang.String" >
-        select 
-        <include refid="Base_Column_List" />
-        from tbl_interface
-        where ID = #{id,jdbcType=VARCHAR}
-    </select>
-    
-    <select id="getAll" parameterType="com.yougou.mobilemall.twweb.domain.Interface" resultMap="InterfaceMapper">
-        select * from tbl_interface where 1=1 
-        <include refid="where" />
-    </select>
-    
-    <select id="getByPage" parameterType="com.yougou.mobilemall.twweb.domain.Interface" resultMap="InterfaceMapper">
-        select * from tbl_interface where 1=1 
-        <include refid="where" />
-    </select>
-    
-    <select id="getByPageCount" parameterType="com.yougou.mobilemall.twweb.domain.Interface" resultType="int">
-        select count(1) from tbl_interface where 1=1 
-        <include refid="where" />
-    </select>
-   
-    <insert id="save" parameterType="com.yougou.mobilemall.twweb.domain.Interface" >
-        insert into tbl_interface (<include refid="Base_Column_List" />)
-        values (
-        #{id,jdbcType=VARCHAR},
-        #{applicationId,jdbcType=VARCHAR},
-        #{title,jdbcType=VARCHAR},
-        #{url,jdbcType=VARCHAR},
-        #{protocol,jdbcType=VARCHAR},
-        #{dbUrl,jdbcType=VARCHAR},
-        #{dbDriver,jdbcType=VARCHAR},
-        #{dbUser,jdbcType=VARCHAR},
-        #{dbPassword,jdbcType=VARCHAR},
-        #{setupScript,jdbcType=LONGVARCHAR},
-        #{teardownScript,jdbcType=LONGVARCHAR},
-        #{description,jdbcType=LONGVARCHAR},
-        #{createTime,jdbcType=TIMESTAMP},
-        #{updateTime,jdbcType=TIMESTAMP}
-        )
-    </insert>
-    
-    <delete id="remove" parameterType="java.lang.String" >
-        delete from tbl_interface
-        where ID = #{id,jdbcType=VARCHAR}
-    </delete>
-    
-    <update id="update" parameterType="com.yougou.mobilemall.twweb.domain.Interface" >
-        update tbl_interface
-        <set>
-            <if test="id != null" >
-                id = #{id,jdbcType=VARCHAR},
-            </if>
-            <if test="applicationId != null" >
-                application_id = #{applicationId,jdbcType=VARCHAR},
-            </if>
-            <if test="title != null" >
-                title = #{title,jdbcType=VARCHAR},
-            </if>
-            <if test="url != null" >
-                url = #{url,jdbcType=VARCHAR},
-            </if>
-            <if test="protocol != null" >
-                protocol = #{protocol,jdbcType=VARCHAR},
-            </if>
-            <if test="dbUrl != null" >
-                db_url = #{dbUrl,jdbcType=VARCHAR},
-            </if>
-            <if test="dbDriver != null" >
-                db_driver = #{dbDriver,jdbcType=VARCHAR},
-            </if>
-            <if test="dbUser != null" >
-                db_user = #{dbUser,jdbcType=VARCHAR},
-            </if>
-            <if test="dbPassword != null" >
-                db_password = #{dbPassword,jdbcType=VARCHAR},
-            </if>
-            <if test="setupScript != null" >
-                setup_script = #{setupScript,jdbcType=LONGVARCHAR},
-            </if>
-            <if test="teardownScript != null" >
-                teardown_script = #{teardownScript,jdbcType=LONGVARCHAR},
-            </if>
-            <if test="description != null" >
-                description = #{description,jdbcType=LONGVARCHAR},
-            </if>
-            <if test="createTime != null" >
-                create_time = #{createTime,jdbcType=TIMESTAMP},
-            </if>
-            <if test="updateTime != null" >
-                update_time = #{updateTime,jdbcType=TIMESTAMP}
-            </if>
-        </set>
-        where ID = #{id,jdbcType=VARCHAR}
-    </update>
 </mapper>

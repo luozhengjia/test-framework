@@ -1,102 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="UnitCaseMapper" >
-    <resultMap id="UnitCaseMapper" type="com.yougou.mobilemall.twweb.domain.UnitCase" >
-        
+<mapper namespace="cn.uc.itest.dao.mapper.UnitCaseMapper" >
+    <resultMap id="UnitCaseMapper" type="cn.uc.itest.model.UnitCase" >
         <result column="id" property="id" jdbcType="VARCHAR" />
-        
         <result column="name" property="name" jdbcType="VARCHAR" />
-        
         <result column="interface_id" property="interfaceId" jdbcType="VARCHAR" />
-        
         <result column="match_mode" property="matchMode" jdbcType="TINYINT" />
-        
         <result column="expect_value" property="expectValue" jdbcType="LONGVARCHAR" />
     </resultMap>
-    
-    <sql id="Base_Column_List" >
-        id,
-        name,
-        interface_id,
-        match_mode,
-        expect_value
-    </sql>
-    
-    <sql id="where">
-        <if test="id!=null and id!=''">
-        and id = #{id,jdbcType=VARCHAR}
-        </if>
-        <if test="name!=null and name!=''">
-        and name = #{name,jdbcType=VARCHAR}
-        </if>
-        <if test="interfaceId!=null and interfaceId!=''">
-        and interface_id = #{interfaceId,jdbcType=VARCHAR}
-        </if>
-        <if test="matchMode!=null and matchMode!=''">
-        and match_mode = #{matchMode,jdbcType=TINYINT}
-        </if>
-        <if test="expectValue!=null and expectValue!=''">
-        and expect_value = #{expectValue,jdbcType=LONGVARCHAR}
-        </if>
-    </sql>
-    
-    <select id="getById" resultMap="UnitCaseMapper" parameterType="java.lang.String" >
-        select 
-        <include refid="Base_Column_List" />
-        from tbl_unit_case
-        where ID = #{id,jdbcType=VARCHAR}
-    </select>
-    
-    <select id="getAll" parameterType="com.yougou.mobilemall.twweb.domain.UnitCase" resultMap="UnitCaseMapper">
-        select * from tbl_unit_case where 1=1 
-        <include refid="where" />
-    </select>
-    
-    <select id="getByPage" parameterType="com.yougou.mobilemall.twweb.domain.UnitCase" resultMap="UnitCaseMapper">
-        select * from tbl_unit_case where 1=1 
-        <include refid="where" />
-    </select>
-    
-    <select id="getByPageCount" parameterType="com.yougou.mobilemall.twweb.domain.UnitCase" resultType="int">
-        select count(1) from tbl_unit_case where 1=1 
-        <include refid="where" />
-    </select>
-   
-    <insert id="save" parameterType="com.yougou.mobilemall.twweb.domain.UnitCase" >
-        insert into tbl_unit_case (<include refid="Base_Column_List" />)
-        values (
-        #{id,jdbcType=VARCHAR},
-        #{name,jdbcType=VARCHAR},
-        #{interfaceId,jdbcType=VARCHAR},
-        #{matchMode,jdbcType=TINYINT},
-        #{expectValue,jdbcType=LONGVARCHAR}
-        )
-    </insert>
-    
-    <delete id="remove" parameterType="java.lang.String" >
-        delete from tbl_unit_case
-        where ID = #{id,jdbcType=VARCHAR}
-    </delete>
-    
-    <update id="update" parameterType="com.yougou.mobilemall.twweb.domain.UnitCase" >
-        update tbl_unit_case
-        <set>
-            <if test="id != null" >
-                id = #{id,jdbcType=VARCHAR},
-            </if>
-            <if test="name != null" >
-                name = #{name,jdbcType=VARCHAR},
-            </if>
-            <if test="interfaceId != null" >
-                interface_id = #{interfaceId,jdbcType=VARCHAR},
-            </if>
-            <if test="matchMode != null" >
-                match_mode = #{matchMode,jdbcType=TINYINT},
-            </if>
-            <if test="expectValue != null" >
-                expect_value = #{expectValue,jdbcType=LONGVARCHAR}
-            </if>
-        </set>
-        where ID = #{id,jdbcType=VARCHAR}
-    </update>
 </mapper>
